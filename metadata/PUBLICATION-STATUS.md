@@ -1,12 +1,26 @@
-status: draft
+status: release-ready
+publication_kind: research-proposal-draft
 last_reviewed: 2026-10-11
 
-reason: The proposed LNASF Component Contract is a research hypothesis. The preliminary comparison now includes FORMS, Rainbow, REX, ML-DEECo, ML-specific component abstractions, HAFLoop, and a REFSQ 2022 talk on learning-native software. A reproducible systematic search and exhaustive full-text comparison are still incomplete; the draft explicitly scopes the contract as a candidate proposal and includes no empirical claim of improved performance. LNASF-v0.2-draft.tex has not been compiled and checked as a publication PDF.
+readiness_scope: This approval is only for archiving and versioning an explicitly qualified research proposal. It does not mean the work is peer-reviewed, that novelty has been established, or that empirical performance benefits have been demonstrated.
 
-Before changing status to release-ready:
-- Complete and record a reproducible prior-art search and full-text comparison with the closest works.
-- Refine the candidate contribution based on that comparison.
-- Implement contract-conformance tests and run controlled baseline/ablation experiments, or clearly scope the paper as a proposal if evaluation remains unavailable.
-- Compile `LNASF-v0.2-draft.tex` into `LNASF-v0.2-Research-Positioning.pdf`, visually inspect the PDF, and ensure the PDF, TeX, Markdown, bibliography, citation metadata, and release notes describe the same version.
-- Regenerate and verify metadata/SHA256SUMS.txt from the actual repository files.
-- Confirm that the GitHub release and Zenodo archival setup is intentionally configured for the target version.
+confirmed:
+- LNASF-v0.2-draft.tex compiled successfully in GitHub Actions into LNASF-v0.2-Research-Positioning.pdf.
+- Automated PDF text checks passed for the candidate Component Contract and key prior-art references.
+- The generated 13-page PDF was visually reviewed, including the cover, contract equation/gate, and references page.
+- The PDF and source identify this as a research working draft.
+- The candidate contribution is clearly labeled as a proposal, not a finding of historical originality.
+
+limitations to disclose in the release:
+- The related-work comparison is focused and preliminary, not a systematic literature review.
+- Full-text comparison with the closest approaches is incomplete.
+- The evaluation plan is proposed; controlled experiments and conformance tests have not yet established an improvement.
+- Novelty and performance benefits remain unverified.
+
+before journal submission:
+- Complete and document a reproducible prior-art search and full-text comparison.
+- Refine the claim according to the comparison.
+- Implement conformance tests and run controlled baseline/ablation experiments, or position any paper explicitly as a proposal if evaluation is not available.
+- Update this status after the research evidence changes.
+
+release workflow note: The GitHub release workflow refreshes and verifies metadata/SHA256SUMS.txt from actual repository bytes. Do not manually treat the current warning-only checksum file as a verified checksum manifest.
