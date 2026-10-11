@@ -6,6 +6,9 @@
 **Date:** 2026-08-28  
 **Status:** Technical Concept and Architecture Specification
 
+
+> **Research-positioning supplement — working draft (2026-10-11).** The prior-art analysis and candidate component contract below are provisional research additions to the editable Markdown. The existing `LNASF-v0.1-Technical-Specification.pdf` and `LNASF-v0.1.tex` remain historical Version 0.1 snapshots and do not yet contain this supplement. Do not cite the old PDF as containing these additions. The proposed distinction has not yet been established by a systematic literature review or empirical evaluation.
+
 ## Keywords
 
 Machine Learning; Artificial Intelligence; Self-Adaptive Software; Adaptive Software; Online Learning; Runtime Adaptation; Learning-Enabled Software; Learning-Native Software Components; Adaptive Software Components; Software Libraries; Software Frameworks; Runtime Intelligence; Native Machine Learning; Scratch Machine Learning; Predictive Software; Adaptive Systems; Feedback-Driven Software; Learning-Based Adaptation; Frontend Intelligence; Backend Intelligence; Learning-Native Runtime.
@@ -513,52 +516,60 @@ The important question is not merely whether a model can predict something, but 
 
 ## 23. Prior Art and Related Work
 
-LNASF is positioned within established bodies of research rather than claiming to replace them.
+LNASF sits within established research on autonomic computing and self-adaptive systems [1, 2], the use of machine learning in self-adaptation [3], online runtime learning and component assembly [4], machine-learning-enabled self-organizing components [5], component-based ML abstractions for self-optimizing systems [6, 7], and adaptable feedback-loop architectures [8].
 
-Autonomic computing and self-managing systems were articulated early by Kephart and Chess. The self-adaptive software literature subsequently developed extensive feedback-driven architectural models, including MAPE-K.
+These works are not peripheral: REX directly combines online learning with runtime adaptation of software components; ML-DEECo and subsequent component-abstraction work explicitly integrate machine learning into component-based adaptive systems; and HAFLoop studies reusable architectures for feedback-loop adaptation. Accordingly, LNASF does not claim to originate runtime learning, component-level self-adaptation, reusable adaptation loops, or the individual principles listed below.
 
-Machine learning has been studied extensively as a mechanism for supporting self-adaptation. REX demonstrated online learning for runtime emergent software systems. ML-DEECo is particularly relevant because it explores machine-learning-enabled components in a component-based self-organizing architecture.
-
-These works establish that learning, runtime adaptation, feedback loops, and learning-enabled components are not new concepts.
-
-The purpose of LNASF is therefore not to claim historical ownership of these individual ideas. It proposes a common architectural vocabulary and design model centered on learning-native reusable software components, with explicit separation of learning, prediction, decision, safety, adaptation, and fallback.
+The literature comparison in [RESEARCH-POSITIONING.md](RESEARCH-POSITIONING.md) is a focused preliminary analysis, not an exhaustive or protocol-driven systematic review. Detailed novelty claims must wait until the closest works have been compared from their full texts using an explicit search and screening method.
 
 ## 24. Position Relative to Prior Art
 
 LNASF does not claim to invent:
 
-```text
-Machine Learning
-Self-Adaptive Software
-Autonomic Computing
-MAPE-K
-Online Learning
-Runtime Adaptation
-Predictive Prefetching
-Adaptive Caching
-Adaptive Scheduling
-Learning-Enabled Components
-```
+- machine learning or online learning;
+- self-adaptive software or autonomic computing;
+- MAPE-K or feedback-loop adaptation;
+- runtime learning and adaptation of software components;
+- predictive prefetching, adaptive caching, or adaptive scheduling;
+- confidence/uncertainty estimation, decision policies, safety constraints, or deterministic fallback as isolated concepts.
 
-Instead, the proposed framework focuses on the following combination:
+The candidate contribution is a more specific architectural formulation: **an explicit, reusable, and testable component-boundary contract for learning-enabled software**. It requires the component design to state what it observes and learns, how predictions and their evidence are represented, how a separate gate admits or rejects candidate adaptations, which actions are allowed, which deterministic fallback is retained, and how outcomes and adaptation overhead are measured.
 
-$$
-Reusable\ Software\ Component
-+
-Native\ Learning
-+
-Prediction
-+
-Explicit\ Decision\ Policy
-+
-Safety\ Constraints
-+
-Deterministic\ Baseline
-+
-Feedback
-$$
+This is a candidate contribution—not a proven claim of historical originality. Prior approaches may already provide equivalent or overlapping mechanisms. The comparison and evaluation required to decide that question are recorded in [RESEARCH-POSITIONING.md](RESEARCH-POSITIONING.md).
 
-This is presented as a technical proposal requiring implementation and empirical validation.
+### 24.1. Candidate Contribution: The LNASF Component Contract
+
+For a learning-enabled component (C), the proposed contract is:
+
+[
+\operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
+]
+
+where:
+
+- (B): deterministic baseline behavior;
+- (O): observation interface and collection boundaries;
+- (M): learning model and update procedure;
+- (P): prediction interface, including evidence sufficiency or uncertainty;
+- (G): explicit adaptation-admission gate, separate from the predictor;
+- (A): permitted adaptation actions and resource bounds;
+- (F): deterministic fallback or abstention behavior;
+- (E): outcome evaluation and feedback into subsequent learning.
+
+One candidate gate is:
+
+[
+G_t(a)=
+[q_t\geq\epsilon]
+\land [S(a,o_t)=\mathrm{true}]
+\land [\widehat{\Delta U}_t(a)-C_{\mathrm{adapt},t}>\lambda]
+]
+
+The component applies an adaptive action only when the gate passes. Otherwise it uses (B(o_t)), or returns an advisory result in advisory mode. Here (q_t) is an application-defined evidence-adequacy measure; (S) is a hard safety/resource constraint; (widehat{\Delta U}_t) is estimated utility improvement; and (C_{\mathrm{adapt},t}) is adaptation cost. Thresholds (epsilon) and (lambda) are application-specific and require evaluation. An uncalibrated confidence score must not be presented as a calibrated probability.
+
+The candidate distinction is the **explicit contract and its conformance/evaluation obligations at the reusable component boundary**, not the invention of any one of these ingredients. Whether this contract is sufficiently different from REX, ML-DEECo, component-based ML abstractions, and existing adaptive-loop architectures remains an open research question.
+
+A possible testable invariant is that a component must not apply a learned adaptation when evidence is insufficient, a hard constraint fails, or predicted net benefit does not exceed the specified threshold. The invariant must be encoded as tests and checked in each reference implementation; this document alone does not establish it.
 
 ## 25. Research Hypothesis
 
@@ -681,9 +692,9 @@ An adaptive component should be evaluated against an appropriate deterministic b
 
 ## 30. Scope of This Disclosure
 
-This document records, as Version 0.1, the author's proposed terminology, architectural organization, mathematical framing, design principles, and implementation directions for LNASF.
+The Version 0.1 technical disclosure records the author's proposed terminology, architectural organization, mathematical framing, design principles, and implementation directions for LNASF. The editable Markdown now includes a dated research-positioning supplement proposing the LNASF Component Contract for further investigation. That supplement is a working draft; it is not yet synchronized into the historical Version 0.1 TeX/PDF, and its novelty has not been established by a systematic comparison or empirical evaluation.
 
-It intentionally distinguishes established prior art from the specific framework formulation proposed here.
+The project intentionally distinguishes established prior art from candidate contributions still requiring validation.
 
 This document is a technical disclosure. It is not legal advice and does not by itself create exclusive rights in abstract ideas or guarantee patentability.
 
@@ -693,14 +704,14 @@ Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Te
 
 ## References
 
-1. Kephart, J. O., & Chess, D. M. (2003). The Vision of Autonomic Computing. *IEEE Computer*, 36(1), 41-50. DOI: 10.1109/MC.2003.1160055.
+1. Kephart, J. O., & Chess, D. M. (2003). The Vision of Autonomic Computing. *IEEE Computer*, 36(1), 41–50. DOI: [10.1109/MC.2003.1160055](https://doi.org/10.1109/MC.2003.1160055).
+2. Wong, T., Wagner, M., & Treude, C. (2022). Self-adaptive systems: A systematic literature review across categories and domains. *Information and Software Technology*, 148, Article 106934. DOI: [10.1016/j.infsof.2022.106934](https://doi.org/10.1016/j.infsof.2022.106934).
+3. Gheibi, O., Weyns, D., & Quin, F. (2022). Applying Machine Learning in Self-Adaptive Systems: A Systematic Literature Review. *ACM Transactions on Autonomous and Adaptive Systems*. DOI: [10.1145/3469440](https://doi.org/10.1145/3469440). Preprint: arXiv:2103.04112 (2021).
+4. Porter, B., Grieves, M., Rodrigues Filho, R., & Leslie, D. (2016). REX: A Development Platform and Online Learning Approach for Runtime Emergent Software Systems. *Proceedings of OSDI 2016*, 333–348. [USENIX paper](https://www.usenix.org/conference/osdi16/technical-sessions/presentation/porter).
+5. Töpfer, M., Abdullah, M., Kruliš, M., Bureš, T., & Hnětynka, P. (2022). ML-DEECo: A Machine-Learning-Enabled Framework for Self-organizing Components. *ACSOS 2022 Companion*. DOI: [10.1109/ACSOSC56246.2022.00033](https://doi.org/10.1109/ACSOSC56246.2022.00033).
+6. Töpfer, M., Abdullah, M., Bureš, T., Hnětynka, P., & Kruliš, M. (2023). Machine-learning abstractions for component-based self-optimizing systems. *International Journal on Software Tools for Technology Transfer*, 25, 717–731. DOI: [10.1007/s10009-023-00726-x](https://doi.org/10.1007/s10009-023-00726-x).
+7. Abdullah, M., Töpfer, M., Bureš, T., Hnětynka, P., Kruliš, M., & Plášil, F. (2023). Introducing Estimators—Abstraction for Easy ML Employment in Self-adaptive Architectures. *ECSA 2022 Tracks and Workshops*, 370–385. DOI: [10.1007/978-3-031-36889-9_25](https://doi.org/10.1007/978-3-031-36889-9_25).
+8. Zavala, E., Franch, X., Marco, J., & Berger, C. (2020). HAFLoop: An architecture for supporting Highly Adaptive Feedback Loops in self-adaptive systems. *Future Generation Computer Systems*, 105, 607–630. DOI: [10.1016/j.future.2019.12.026](https://doi.org/10.1016/j.future.2019.12.026).
+9. Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007/2008). A Design Science Research Methodology for Information Systems Research. *Journal of Management Information Systems*, 24(3), 45–77. DOI: [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).
 
-2. Wong, T., Wagner, M., & Treude, C. (2022). Self-adaptive systems: A systematic literature review across categories and domains. *Information and Software Technology*.
-
-3. Gheibi, O., Weyns, D., & Quin, F. (2021). Applying Machine Learning in Self-Adaptive Systems: A Systematic Literature Review. *ACM Transactions on Autonomous and Adaptive Systems*. DOI: 10.1145/3469440.
-
-4. Porter, B., Grieves, M., Rodrigues Filho, R., & Leslie, D. (2016). REX: A Development Platform and Online Learning Approach for Runtime Emergent Software Systems. *Proceedings of OSDI 2016*, 333-348.
-
-5. Töpfer, M., Abdullah, M., Kruliš, M., Bureš, T., & Hnětynka, P. (2022). ML-DEECo: A Machine-Learning-Enabled Framework for Self-organizing Components. *ACSOS 2022*. DOI: 10.1109/ACSOSC56246.2022.00033.
-
-6. Töpfer, M., Abdullah, M., Bureš, T., Hnětynka, P., & Kruliš, M. (2023). Machine-learning abstractions for component-based self-optimizing systems. *International Journal on Software Tools for Technology Transfer*, 25, 717-731. DOI: 10.1007/s10009-023-00726-x.
+The expanded related-work comparison is preliminary, not systematic. See [RESEARCH-POSITIONING.md](RESEARCH-POSITIONING.md) for the candidate contribution and remaining validation work.
