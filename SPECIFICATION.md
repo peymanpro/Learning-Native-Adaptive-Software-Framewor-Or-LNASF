@@ -516,7 +516,7 @@ The important question is not merely whether a model can predict something, but 
 
 ## 23. Prior Art and Related Work
 
-LNASF sits within established research on autonomic computing and self-adaptive systems [1, 2], the use of machine learning in self-adaptation [3], online runtime learning and component assembly [4], machine-learning-enabled self-organizing components [5], component-based ML abstractions for self-optimizing systems [6, 7], and adaptable feedback-loop architectures [8].
+LNASF sits within established research on autonomic computing and self-adaptive systems [1, 2], the use of machine learning in self-adaptation [3], online runtime learning and component assembly [4], machine-learning-enabled self-organizing components [5], component-based ML abstractions for self-optimizing systems [6, 7], adaptable feedback-loop architectures [8], reusable architecture-based self-adaptation infrastructure [11], and the FORMS unifying reference model for distributed self-adaptive systems [10].
 
 These works are not peripheral: REX directly combines online learning with runtime adaptation of software components; ML-DEECo and subsequent component-abstraction work explicitly integrate machine learning into component-based adaptive systems; and HAFLoop studies reusable architectures for feedback-loop adaptation. Accordingly, LNASF does not claim to originate runtime learning, component-level self-adaptation, reusable adaptation loops, or the individual principles listed below.
 
@@ -567,7 +567,7 @@ $$
 
 The component applies an adaptive action only when the gate passes. Otherwise it uses `B(o_t)`, or returns an advisory result in advisory mode. Here `q_t` is an application-defined evidence-adequacy measure; `S` is a hard safety/resource constraint; `\widehat{\Delta U}_t` is estimated utility improvement; and `C_{adapt}` is adaptation cost. Thresholds `\epsilon` and `\lambda` are application-specific and require evaluation. An uncalibrated confidence score must not be presented as a calibrated probability.
 
-The candidate distinction is the **explicit contract and its conformance/evaluation obligations at the reusable component boundary**, not the invention of any one of these ingredients. Whether this contract is sufficiently different from REX, ML-DEECo, component-based ML abstractions, and existing adaptive-loop architectures remains an open research question.
+The candidate distinction is the **explicit contract and its conformance/evaluation obligations at the reusable component boundary**, not the invention of any one of these ingredients. Whether this contract is sufficiently different from REX, ML-DEECo, component-based ML abstractions, and existing adaptive-loop architectures remains an open research question. In particular, FORMS [10] and Rainbow [11] prevent LNASF from claiming distinction merely because it offers a reusable or unifying adaptation architecture.
 
 A possible testable invariant is that a component must not apply a learned adaptation when evidence is insufficient, a hard constraint fails, or predicted net benefit does not exceed the specified threshold. The invariant must be encoded as tests and checked in each reference implementation; this document alone does not establish it.
 
@@ -713,5 +713,7 @@ Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Te
 7. Abdullah, M., Töpfer, M., Bureš, T., Hnětynka, P., Kruliš, M., & Plášil, F. (2023). Introducing Estimators—Abstraction for Easy ML Employment in Self-adaptive Architectures. *ECSA 2022 Tracks and Workshops*, 370–385. DOI: [10.1007/978-3-031-36889-9_25](https://doi.org/10.1007/978-3-031-36889-9_25).
 8. Zavala, E., Franch, X., Marco, J., & Berger, C. (2020). HAFLoop: An architecture for supporting Highly Adaptive Feedback Loops in self-adaptive systems. *Future Generation Computer Systems*, 105, 607–630. DOI: [10.1016/j.future.2019.12.026](https://doi.org/10.1016/j.future.2019.12.026).
 9. Peffers, K., Tuunanen, T., Rothenberger, M. A., & Chatterjee, S. (2007). A Design Science Research Methodology for Information Systems Research. *Journal of Management Information Systems*, 24(3), 45–77. DOI: [10.2753/MIS0742-1222240302](https://doi.org/10.2753/MIS0742-1222240302).
+10. Weyns, D., Malek, S., & Andersson, J. (2012). FORMS: Unifying Reference Model for Formal Specification of Distributed Self-adaptive Systems. *ACM Transactions on Autonomous and Adaptive Systems*, 7(1), Article 8, 1–61. DOI: [10.1145/2168260.2168268](https://doi.org/10.1145/2168260.2168268).
+11. Garlan, D., Cheng, S.-W., Huang, A.-C., Schmerl, B., & Steenkiste, P. (2004). Rainbow: Architecture-Based Self-Adaptation with Reusable Infrastructure. *IEEE Computer*, 37(10), 46–54. DOI: [10.1109/MC.2004.175](https://doi.org/10.1109/MC.2004.175).
 
 The expanded related-work comparison is preliminary, not systematic. See [RESEARCH-POSITIONING.md](RESEARCH-POSITIONING.md) for the candidate contribution and remaining validation work.
