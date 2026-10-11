@@ -46,7 +46,7 @@ $
 
 Here `G` is an explicit adaptation-admission gate separated from prediction; the other terms specify the baseline, observations, update procedure, prediction evidence, permitted actions, fallback, and evaluation/feedback.
 
-The intended distinction is not a claim to invent online learning or self-adaptive software. Closely related prior art includes REX, ML-DEECo, component-based ML abstractions, and adaptive feedback-loop architectures. Whether the proposed contract adds a defensible distinction remains to be established by full-text comparison and controlled evaluation.
+The intended distinction is not a claim to invent online learning or self-adaptive software. Closely related prior art includes REX, ML-DEECo, component-based ML abstractions, adaptive feedback-loop architectures, Rainbow's reusable adaptation infrastructure, and the FORMS reference model. LNASF cannot claim novelty merely for unifying or reusing adaptation principles. Whether the proposed contract adds a defensible distinction remains to be established by full-text comparison and controlled evaluation.
 
 - [Research positioning and preliminary prior-art comparison](RESEARCH-POSITIONING.md)
 - [Editable specification and proposed contract](SPECIFICATION.md#241-candidate-contribution-the-lnasf-component-contract)
