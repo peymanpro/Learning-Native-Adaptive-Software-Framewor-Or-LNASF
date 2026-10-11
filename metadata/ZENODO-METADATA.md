@@ -1,43 +1,34 @@
-# Suggested Zenodo Metadata
+# Zenodo Metadata and GitHub Archival
 
-Use these values when creating the Version 0.1 record.
+This file records the intended descriptive metadata for repository releases. The preferred publication path is Zenodo's GitHub integration, rather than a second, independent upload from GitHub Actions.
 
 ## Title
 
 Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification
 
-## Version
+## Repository release
 
-0.1
-
-## Publication date
-
-2026-08-28
-
-## Creators
-
-Peyman Salimi
+- **Version:** 0.1.2 (GitHub tag: `v0.1.2`)
+- **Release date:** 2026-10-11
+- **Creator:** Peyman Salimi
+- **Canonical repository:** https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF
+- **Concept DOI currently linked from GitHub:** https://doi.org/10.5281/zenodo.22142517
 
 ## Description
 
-A technical concept and architecture specification for reusable software components that observe runtime behavior, learn from experience, make constrained predictions and decisions, and adapt selected aspects of their behavior while retaining deterministic fallback behavior. The specification emphasizes native learning within the host software ecosystem, scratch implementations of learning mechanisms, explicit decision policies, safety constraints, feedback loops, and cross-language applicability to libraries, frameworks, runtimes, and infrastructure.
+The repository preserves the Version 0.1 technical concept and architecture specification for reusable software components that observe runtime behavior, learn from experience, make constrained predictions and decisions, and adapt selected aspects of their behavior while retaining deterministic fallback behavior. The repository release adds an indexed set of limited frontend state and interaction examples alongside the existing real-time communication examples. These demonstrations cover selected principles only; they do not claim that the full framework is complete or establish general performance improvements.
 
 ## Keywords
 
-machine learning; artificial intelligence; self-adaptive software; adaptive software; online learning; runtime adaptation; learning-enabled software; learning-native software components; software libraries; software frameworks; runtime intelligence; native machine learning; scratch machine learning; adaptive systems; feedback-driven software; frontend intelligence; backend intelligence
+machine learning; artificial intelligence; self-adaptive software; adaptive software; online learning; runtime adaptation; learning-enabled software; learning-native software components; software libraries; software frameworks; runtime intelligence; native learning; adaptive systems; feedback-driven software; frontend adaptation; workflow learning; LNASF
 
-## Resource type
+## Metadata and versioning behavior
 
-Text / Technical specification
+- The root `CITATION.cff` identifies the author, version, canonical repository URL, keywords, and description for the GitHub release.
+- No root `.zenodo.json` is present; do not add one casually, because Zenodo gives `.zenodo.json` precedence over `CITATION.cff` when both exist.
+- When this GitHub repository is enabled in Zenodo, future GitHub releases are automatically archived. Zenodo assigns a version-specific DOI for each new archived version while the concept DOI resolves to the latest version.
+- The release workflow does not require a Zenodo API token for this integration. It cannot enable the repository inside a private Zenodo account or verify that the account toggle is on.
 
-## License for the specification and documentation
+## Scope
 
-CC BY 4.0
-
-## Suggested citation
-
-Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification*, Version 0.1.
-
-## Notes
-
-Before publication, replace the placeholder author email and repository URL in `metadata/CITATION.cff` with the final values.
+GitHub tag `v0.1.2` is a repository-level documentation and publication-process release. The core specification remains Version 0.1, and the existing specification PDF is unchanged.

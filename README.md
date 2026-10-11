@@ -1,5 +1,7 @@
 # Learning-Native Adaptive Software Framework (LNASF)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22142517.svg)](https://doi.org/10.5281/zenodo.22142517)
+
 **Technical Concept and Architecture Specification - Version 0.1**
 
 **Author:** Peyman Salimi  
@@ -45,15 +47,24 @@ The [LNASF real-time communication examples](REALTIME-COMMUNICATION-EXAMPLES.md)
 
 The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md) document two limited research demonstrations: the [React useState hook](https://github.com/peymanpro/LNASF-Adaptive-React-useState-Hook) explores online state-transition learning with explicit adaptation and safety gates; the [Next.js dnd-kit playground](https://github.com/peymanpro/LNASF-Adaptive-Next-dnd-kit-Playground) learns from interaction-event sequences and presents user-controlled workflow suggestions. They demonstrate selected principles at different frontend boundaries, not the complete LNASF framework.
 
+## Versioned Releases and Zenodo Archival
+
+GitHub releases are published through the [versioned release workflow](.github/workflows/release.yml). The workflow validates the version against `CITATION.cff` and `CHANGELOG.md`, refreshes and verifies the SHA-256 manifest, creates an annotated version tag, and publishes a GitHub Release.
+
+See [RELEASE-PROCESS.md](RELEASE-PROCESS.md) for the one-time `RELEASE_TOKEN` setup and Zenodo integration steps. When this repository is enabled in the Zenodo GitHub integration, future GitHub releases are automatically archived and versioned. The DOI badge above points to the existing Zenodo concept record; each archived release can have its own version-specific DOI.
+
+**Scope:** release `v0.1.2` updates the repository's documentation, example catalog, and release process. The underlying technical specification and PDF remain Version 0.1; they are not being represented as a newly revised specification.
+
 ## Files
 
 - `SPECIFICATION.md` - editable specification with LaTeX math.
 - `LNASF-v0.1.tex` - LaTeX source used to produce the PDF.
 - `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
 - `references/` - bibliography source.
-- `metadata/CITATION.cff` - citation metadata.
-- `metadata/SHA256SUMS.txt` - integrity hashes for the published files.
+- `CITATION.cff` - software citation metadata for the versioned repository release.
+- `metadata/SHA256SUMS.txt` - integrity hashes for the versioned publication files.
 - `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
+- `RELEASE-PROCESS.md` - versioned GitHub release and Zenodo archival setup.
 - `CHANGELOG.md` - version history.
 
 ## Citation
