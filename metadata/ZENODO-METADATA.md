@@ -2,17 +2,17 @@
 
 This file records the intended descriptive metadata for repository releases. The preferred publication path is Zenodo's GitHub integration, rather than a second, independent upload from GitHub Actions.
 
-## Planned next-revision title (working draft)
+## Version 0.2.0 title (research proposal draft)
 
 Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract
 
 **Previous archival title:** Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification
 
-## Existing archival record and next revision
+## Archival version
 
-- **Current working source:** preliminary research-positioning draft dated 2026-10-11 (not yet released)
+- **Version:** 0.2.0 (research proposal draft)
 - **Previous specification snapshot:** Version 0.1
-- **Planned next version:** 0.2.0 (working draft; not yet released; publish only after the source, final PDF, references, and metadata are synchronized and checked)
+- **Release title:** LNASF v0.2.0 — Research Proposal Draft
 - **Creator:** Peyman Salimi
 - **Canonical repository:** https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF
 - **Concept DOI currently linked from GitHub:** https://doi.org/10.5281/zenodo.22142517
@@ -34,4 +34,4 @@ machine learning; artificial intelligence; self-adaptive software; adaptive soft
 
 ## Scope
 
-No claim is made here that a new release has been published. The current draft is not yet synchronized with a revised, compiled PDF. The old PDF remains a Version 0.1 snapshot; prepare new archival metadata only after the research draft is finalized.
+Version 0.2.0 is intended to archive the compiled research proposal and its updated source, references, and metadata. It does not claim peer review, established novelty, or demonstrated performance improvements. Confirm the resulting version-specific DOI in Zenodo after the GitHub Release is published; the existing concept DOI reflects an earlier archival state until Zenodo processes the new release.
