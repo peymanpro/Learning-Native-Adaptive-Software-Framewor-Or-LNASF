@@ -39,7 +39,7 @@ and
 
 Here, `q_t` denotes an application-defined evidence-adequacy measure, `S` a hard safety/resource constraint, `\widehat{\Delta U}` an estimated utility improvement, `C_{adapt}` the cost of adapting, and `\epsilon, \lambda` domain-specific thresholds. These are not universal constants, and confidence scores must not be described as calibrated probabilities unless calibration has been evaluated.
 
-The distinctive research question is whether making these elements and their relationships a **component-boundary contract**, rather than leaving them as informal architecture guidance, improves testability, safe abstention, portability, and net outcomes across multiple software contexts.
+A stronger prior-art constraint must be acknowledged: Rainbow already provides reusable architecture-based self-adaptation infrastructure [11], and FORMS proposes a unifying reference model for formal specification of distributed self-adaptive systems [10]. Therefore, LNASF cannot plausibly claim novelty merely for being a reusable/unifying adaptation architecture. The narrower research question is whether an explicit contract for **learning-enabled component behavior and the admission of learned actions**, together with verifiable conformance tests and outcome-cost evaluation, provides a distinct and useful artifact beyond these frameworks and the closer ML-specific systems.
 
 ### What is and is not claimed
 
@@ -62,6 +62,8 @@ The distinctive research question is whether making these elements and their rel
 | Abdullah et al. (2023) [7] | Estimator abstractions to ease the use of ML in self-adaptive architectures | Directly relevant to reusable abstractions for integrating ML into adaptive architectures. Full-text comparison is required. |
 | Zavala et al. / HAFLoop (2020) [8] | Modular, reusable architecture for adapting feedback-loop structure and parameters | LNASF cannot claim generic reusable adaptation loops or configurable adaptation structure as novel. |
 | Peffers et al. (2007) [9] | Design Science Research Methodology, including artifact design, demonstration, evaluation, and communication | Provides a suitable methodological pattern for evaluating an architectural artifact; it is not evidence that LNASF's technical concept is novel. |
+| Weyns, Malek & Andersson / FORMS (2012) [10] | Unifying reference model and formal vocabulary for distributed self-adaptive systems | Directly weakens a broad claim that LNASF's novelty is simply a unifying architecture or common vocabulary. The candidate contract must be narrower and compared in detail. |
+| Garlan et al. / Rainbow (2004) [11] | Reusable infrastructure for architecture-based self-adaptation, with explicit monitoring, constraints, and adaptation strategies | Direct prior art for reusable architecture-based adaptation infrastructure and explicit adaptation policies. LNASF's candidate difference must be tied to learned-component contracts and conformance/evaluation obligations, not reusability alone. |
 
 This table is intentionally conservative. It maps high-level overlap based on bibliographic records and available abstracts. It does **not** yet prove detailed equivalence or difference. Before a journal submission, the closest full texts—especially REX, ML-DEECo, the 2023 component abstractions, and Introducing Estimators—must be compared feature by feature.
 
@@ -103,7 +105,7 @@ Ablations should remove one contract obligation at a time (for example, no gate,
 
 ## 7. Recommended defensible wording for a paper
 
-> We propose the LNASF Component Contract as a candidate architectural specification for learning-enabled software components. The contract makes the observation, update, prediction, adaptation-admission, allowed-action, fallback, and outcome-evaluation responsibilities explicit at the component boundary. Its novelty is investigated relative to prior work on online runtime learning, ML-enabled component models, self-adaptive architectures, and adaptive feedback loops. The proposed contribution is therefore the contract's precise formulation and empirical evaluation—not the invention of its individual building blocks.
+> We propose the LNASF Component Contract as a candidate architectural specification for learning-enabled software components. The contract makes the observation, update, prediction, adaptation-admission, allowed-action, fallback, and outcome-evaluation responsibilities explicit at the component boundary. Its novelty is investigated relative to prior work on online runtime learning, ML-enabled component models, self-adaptive architectures, and adaptive feedback loops. The proposed contribution is therefore the contract's precise formulation and empirical evaluation—not the invention of its individual building blocks. The comparison must particularly establish what remains different from FORMS and Rainbow as well as the ML-specific frameworks.
 
 Use the phrase “we are the first” only if a systematic prior-art search provides strong support. Until then, use “we propose,” “we formalize,” and “we evaluate,” and make the comparison itself a visible part of the paper.
 
