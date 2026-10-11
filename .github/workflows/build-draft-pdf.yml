@@ -59,6 +59,9 @@ jobs:
       - name: Commit generated draft PDF to main
         run: |
           set -euo pipefail
+          # Save the freshly compiled PDF outside the worktree because reset can
+          # overwrite the tracked PDF with the previous version.
+          cp LNASF-v0.2-Research-Positioning.pdf "$RUNNER_TEMP/LNASF-v0.2-Research-Positioning.pdf"
           git fetch origin main
           source_sha="$(git rev-parse HEAD:LNASF-v0.2-draft.tex)"
           remote_source_sha="$(git rev-parse origin/main:LNASF-v0.2-draft.tex)"
@@ -67,8 +70,8 @@ jobs:
             exit 1
           fi
           # Keep unrelated main-branch edits made while the build was running.
-          # The generated PDF is still untracked at this point and survives the reset.
           git reset --hard origin/main
+          cp "$RUNNER_TEMP/LNASF-v0.2-Research-Positioning.pdf" LNASF-v0.2-Research-Positioning.pdf
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add LNASF-v0.2-Research-Positioning.pdf
