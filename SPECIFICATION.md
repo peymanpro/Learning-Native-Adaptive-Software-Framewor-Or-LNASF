@@ -2,9 +2,9 @@
 
 **Author:** Peyman Salimi  
 **Email:** salimipeyman@gmail.com  
-**Version:** 0.1  
-**Date:** 2026-08-28  
-**Status:** Technical Concept and Architecture Specification
+**Version:** 0.2.0-draft  
+**Date:** 2026-10-11  
+**Status:** Research working draft — candidate contribution under validation
 
 
 > **Research-positioning supplement — working draft (2026-10-11).** The prior-art analysis and candidate component contract below are provisional research additions to the editable Markdown. The existing `LNASF-v0.1-Technical-Specification.pdf` and `LNASF-v0.1.tex` remain historical Version 0.1 snapshots and do not yet contain this supplement. Do not cite the old PDF as containing these additions. The proposed distinction has not yet been established by a systematic literature review or empirical evaluation.
@@ -700,7 +700,7 @@ This document is a technical disclosure. It is not legal advice and does not by 
 
 ## 31. Citation
 
-Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification*, Version 0.1.
+Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract*, Version 0.2.0-draft (unpublished working draft).
 
 ## References
 
