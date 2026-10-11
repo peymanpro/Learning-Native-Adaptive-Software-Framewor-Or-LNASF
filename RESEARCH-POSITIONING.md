@@ -41,6 +41,9 @@ Here, `q_t` denotes an application-defined evidence-adequacy measure, `S` a hard
 
 A stronger prior-art constraint must be acknowledged: Rainbow already provides reusable architecture-based self-adaptation infrastructure [11], and FORMS proposes a unifying reference model for formal specification of distributed self-adaptive systems [10]. Therefore, LNASF cannot plausibly claim novelty merely for being a reusable/unifying adaptation architecture. The narrower research question is whether an explicit contract for **learning-enabled component behavior and the admission of learned actions**, together with verifiable conformance tests and outcome-cost evaluation, provides a distinct and useful artifact beyond these frameworks and the closer ML-specific systems.
 
+
+The phrase itself also has prior usage: a REFSQ 2022 Industry Track talk by Vinay Kulkarni used “learning-native software systems” as a research direction and described an inbuilt software capability to observe, learn, acquire knowledge from past actions, and tune behavior [12]. This is a conference talk abstract, not a detailed architecture specification, so it does not establish that the specific LNASF Component Contract already exists. It does mean LNASF should not claim novelty for the term or for the broad aspiration of software that learns and self-tunes.
+
 ### What is and is not claimed
 
 **Candidate contribution:** a structured contract and associated conformance/evaluation method for learning-enabled reusable components.
