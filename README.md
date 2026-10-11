@@ -41,6 +41,10 @@ This implementation is an engineering demonstration—not a claim that the full 
 
 The [LNASF real-time communication examples](REALTIME-COMMUNICATION-EXAMPLES.md) document five limited integrations across Express, NestJS, ASP.NET Core, Next.js and React. They make host-native learning, explicit prediction/decision separation, bounded adaptation, deterministic fallback, and runtime measurement executable. The document links the relevant code/test areas through each repository's README and records verified CI evidence. It distinguishes synthetic unit-level checks from real-world performance claims; these are selected reference examples, not complete LNASF implementations.
 
+## Frontend State and Interaction Examples
+
+The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md) document two limited research demonstrations: the [React useState hook](https://github.com/peymanpro/LNASF-Adaptive-React-useState-Hook) explores online state-transition learning with explicit adaptation and safety gates; the [Next.js dnd-kit playground](https://github.com/peymanpro/LNASF-Adaptive-Next-dnd-kit-Playground) learns from interaction-event sequences and presents user-controlled workflow suggestions. They demonstrate selected principles at different frontend boundaries, not the complete LNASF framework.
+
 ## Files
 
 - `SPECIFICATION.md` - editable specification with LaTeX math.
@@ -49,6 +53,7 @@ The [LNASF real-time communication examples](REALTIME-COMMUNICATION-EXAMPLES.md)
 - `references/` - bibliography source.
 - `metadata/CITATION.cff` - citation metadata.
 - `metadata/SHA256SUMS.txt` - integrity hashes for the published files.
+- `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
 - `CHANGELOG.md` - version history.
 
 ## Citation
