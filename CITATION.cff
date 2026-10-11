@@ -30,7 +30,7 @@ abstract: >-
   observation, model updating, prediction evidence, adaptation admission,
   permitted actions, deterministic fallback, and outcome evaluation explicit.
   The candidate contribution is under validation against prior work on online
-  runtime learning, ML-enabled components, self-adaptive architectures, and
-  adaptive feedback loops. Novelty and performance benefits are not yet
-  established. Reference implementations demonstrate limited subsets only.
-  This draft has not yet been released as a synchronized publication PDF.
+  runtime learning, ML-enabled components, self-adaptive architectures, FORMS,
+  Rainbow, and adaptive feedback loops. Novelty and performance benefits are
+  not yet established. Reference implementations demonstrate limited subsets
+  only. This draft has not yet been released as a synchronized publication PDF.
