@@ -4,9 +4,9 @@
 
 The [Publish versioned release workflow](.github/workflows/release.yml) is manually triggered from GitHub Actions on `main`. It:
 
-1. Requires a semantic version such as `0.1.2` and verifies that it matches `CITATION.cff` and the top release section in `CHANGELOG.md`.
+1. Requires a semantic version such as `0.2.0` and verifies that it matches `CITATION.cff` and the top release section in `CHANGELOG.md`.
 2. Refreshes `metadata/SHA256SUMS.txt` over the tracked publication files and verifies every checksum.
-3. Creates an annotated tag (`v0.1.2`) and publishes a GitHub Release with changelog-based notes. A custom title can be supplied.
+3. Creates an annotated tag (`v0.2.0`) and publishes a GitHub Release with changelog-based notes. A custom title can be supplied.
 4. Uses a token owned by the GitHub account that should appear as the release author.
 
 It does not alter the core specification or publish to Zenodo through a separate API call.
@@ -25,7 +25,7 @@ The workflow deliberately fails before checkout or publication if `RELEASE_TOKEN
 
 1. Ensure the new version exists in both `CITATION.cff` and `CHANGELOG.md`.
 2. Open **Actions → Publish versioned release → Run workflow** and select the `main` branch.
-3. Enter the version without the leading `v` (for this release, `0.1.2`). Choose whether it is a pre-release.
+3. Enter the version without the leading `v` (for this release, `0.2.0`). Choose whether it is a pre-release.
 4. Wait for the run to complete, then verify the release under the repository's **Releases** page.
 
 The workflow uses an annotated Git tag and changelog-based release notes. It refuses to overwrite an existing release. If a prior run pushed a tag but failed before publishing the release, re-running the same version can finish the release if the tag already points to a matching versioned commit.
