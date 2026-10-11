@@ -15,9 +15,9 @@
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
 \setlist{nosep}
 
-\title{Learning-Native Adaptive Software Framework (LNASF)\\\large Technical Concept and Architecture Specification}
-\author{Peyman Salimi\\\texttt{salimipeyman@gmail.com}\\\small Alternate: \texttt{pmnslm6344@gmail.com}}
-\date{Research draft v0.2\\October 11, 2026}
+\title{Learning-Native Adaptive Software Framework (LNASF)\\large Technical Concept and Architecture Specification}
+\author{Peyman Salimi\\texttt{salimipeyman@gmail.com}\\small Alternate: \texttt{pmnslm6344@gmail.com}}
+\date{Research draft v0.2\October 11, 2026}
 
 \begin{document}
 \maketitle
@@ -323,7 +323,7 @@ A general formulation is:
 NetUtility=Benefit-Cost-AdaptationOverhead
 \]
 
-\\section{Prior Art and Related Work}
+\section{Prior Art and Related Work}
 LNASF is situated within established research on autonomic computing and self-adaptive systems [1,2], machine learning in feedback-loop-based adaptation [3], online runtime learning and component assembly [4], ML-enabled self-organizing components [5], component-based ML abstractions [6,7], and adaptive feedback-loop architectures [8].
 
 REX directly combines online learning with runtime adaptation of software components. ML-DEECo and subsequent work integrate machine learning into component-based adaptive systems, while HAFLoop studies reusable architectures for adaptation of feedback loops. These works are close prior art. LNASF therefore does not claim to originate online learning, runtime adaptation, component-level learning, generic feedback loops, or safety constraints as isolated concepts.
@@ -419,17 +419,17 @@ This document is a technical disclosure. It is not legal advice and does not by 
 \section{Citation}
 Salimi, Peyman. (2026). \textit{Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification}, Version 0.1.
 
-\\section{References}
-\\begin{enumerate}
-\\item Kephart, J. O., \\& Chess, D. M. (2003). The Vision of Autonomic Computing. \\textit{IEEE Computer}, 36(1), 41--50. DOI: 10.1109/MC.2003.1160055.
-\\item Wong, T., Wagner, M., \\& Treude, C. (2022). Self-adaptive systems: A systematic literature review across categories and domains. \\textit{Information and Software Technology}, 148, Article 106934. DOI: 10.1016/j.infsof.2022.106934.
-\\item Gheibi, O., Weyns, D., \\& Quin, F. (2022). Applying Machine Learning in Self-Adaptive Systems: A Systematic Literature Review. \\textit{ACM Transactions on Autonomous and Adaptive Systems}. DOI: 10.1145/3469440. Preprint: arXiv:2103.04112 (2021).
-\\item Porter, B., Grieves, M., Rodrigues Filho, R., \\& Leslie, D. (2016). REX: A Development Platform and Online Learning Approach for Runtime Emergent Software Systems. \\textit{Proceedings of OSDI 2016}, 333--348.
-\\item T\\\"opfer, M., Abdullah, M., Kruli\\v{s}, M., Bure\\v{s}, T., \\& Hn\\v{e}tynka, P. (2022). ML-DEECo: A Machine-Learning-Enabled Framework for Self-organizing Components. \\textit{ACSOS 2022 Companion}. DOI: 10.1109/ACSOSC56246.2022.00033.
-\\item T\\\"opfer, M., Abdullah, M., Bure\\v{s}, T., Hn\\v{e}tynka, P., \\& Kruli\\v{s}, M. (2023). Machine-learning abstractions for component-based self-optimizing systems. \\textit{International Journal on Software Tools for Technology Transfer}, 25, 717--731. DOI: 10.1007/s10009-023-00726-x.
-\\item Abdullah, M., T\\\"opfer, M., Bure\\v{s}, T., Hn\\v{e}tynka, P., Kruli\\v{s}, M., \\& Pl\\\"a\\v{s}il, F. (2023). Introducing Estimators---Abstraction for Easy ML Employment in Self-adaptive Architectures. \\textit{ECSA 2022 Tracks and Workshops}, 370--385. DOI: 10.1007/978-3-031-36889-9\\_25.
-\\item Zavala, E., Franch, X., Marco, J., \\& Berger, C. (2020). HAFLoop: An architecture for supporting Highly Adaptive Feedback Loops in self-adaptive systems. \\textit{Future Generation Computer Systems}, 105, 607--630. DOI: 10.1016/j.future.2019.12.026.
-\\item Peffers, K., Tuunanen, T., Rothenberger, M. A., \\& Chatterjee, S. (2007/2008). A Design Science Research Methodology for Information Systems Research. \\textit{Journal of Management Information Systems}, 24(3), 45--77. DOI: 10.2753/MIS0742-1222240302.
-\\end{enumerate}
+\section{References}
+\begin{enumerate}
+\item Kephart, J. O., \& Chess, D. M. (2003). The Vision of Autonomic Computing. \textit{IEEE Computer}, 36(1), 41--50. DOI: 10.1109/MC.2003.1160055.
+\item Wong, T., Wagner, M., \& Treude, C. (2022). Self-adaptive systems: A systematic literature review across categories and domains. \textit{Information and Software Technology}, 148, Article 106934. DOI: 10.1016/j.infsof.2022.106934.
+\item Gheibi, O., Weyns, D., \& Quin, F. (2022). Applying Machine Learning in Self-Adaptive Systems: A Systematic Literature Review. \textit{ACM Transactions on Autonomous and Adaptive Systems}. DOI: 10.1145/3469440. Preprint: arXiv:2103.04112 (2021).
+\item Porter, B., Grieves, M., Rodrigues Filho, R., \& Leslie, D. (2016). REX: A Development Platform and Online Learning Approach for Runtime Emergent Software Systems. \textit{Proceedings of OSDI 2016}, 333--348.
+\item T\\\"opfer, M., Abdullah, M., Kruli\v{s}, M., Bure\v{s}, T., \& Hn\v{e}tynka, P. (2022). ML-DEECo: A Machine-Learning-Enabled Framework for Self-organizing Components. \textit{ACSOS 2022 Companion}. DOI: 10.1109/ACSOSC56246.2022.00033.
+\item T\\\"opfer, M., Abdullah, M., Bure\v{s}, T., Hn\v{e}tynka, P., \& Kruli\v{s}, M. (2023). Machine-learning abstractions for component-based self-optimizing systems. \textit{International Journal on Software Tools for Technology Transfer}, 25, 717--731. DOI: 10.1007/s10009-023-00726-x.
+\item Abdullah, M., T\\\"opfer, M., Bure\v{s}, T., Hn\v{e}tynka, P., Kruli\v{s}, M., \& Pl\\\"a\v{s}il, F. (2023). Introducing Estimators---Abstraction for Easy ML Employment in Self-adaptive Architectures. \textit{ECSA 2022 Tracks and Workshops}, 370--385. DOI: 10.1007/978-3-031-36889-9\_25.
+\item Zavala, E., Franch, X., Marco, J., \& Berger, C. (2020). HAFLoop: An architecture for supporting Highly Adaptive Feedback Loops in self-adaptive systems. \textit{Future Generation Computer Systems}, 105, 607--630. DOI: 10.1016/j.future.2019.12.026.
+\item Peffers, K., Tuunanen, T., Rothenberger, M. A., \& Chatterjee, S. (2007/2008). A Design Science Research Methodology for Information Systems Research. \textit{Journal of Management Information Systems}, 24(3), 45--77. DOI: 10.2753/MIS0742-1222240302.
+\end{enumerate}
 
 \end{document}
