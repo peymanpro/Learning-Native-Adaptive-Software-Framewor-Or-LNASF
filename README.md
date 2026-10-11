@@ -89,4 +89,8 @@ The repository contains a manual GitHub Release workflow, but its end-to-end pub
 
 ## Citation
 
+The existing archived Version 0.1 can be cited as:
+
 Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification*, Version 0.1.
+
+The LNASF Component Contract is currently an **unpublished research draft** in `RESEARCH-POSITIONING.md`, `SPECIFICATION.md`, and `LNASF-v0.2-draft.tex`. Do not treat the older Version 0.1 PDF or its DOI record as containing this new candidate contribution.
