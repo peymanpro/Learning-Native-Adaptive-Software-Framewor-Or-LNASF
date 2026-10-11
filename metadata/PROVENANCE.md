@@ -1,6 +1,6 @@
 # Publication Provenance Notes
 
-The repository preserves the Version 0.1 LNASF technical disclosure and catalogs limited engineering examples of selected framework principles. Repository release `v0.1.2` updates the example catalog and publication automation; it does **not** revise the Version 0.1 specification or its PDF.
+The repository preserves the earlier Version 0.1 LNASF disclosure and catalogs limited engineering examples. A preliminary research-positioning supplement dated 2026-10-11 proposes the LNASF Component Contract and adds related-work references. This is an unpublished working draft; it is not evidence of an accepted paper, a verified novel contribution, or a newly archived publication. The historical Version 0.1 TeX/PDF has not yet been updated to include the supplement.
 
 ## Automated release path
 
@@ -12,7 +12,8 @@ The repository preserves the Version 0.1 LNASF technical disclosure and catalogs
 
 ## Preservation notes
 
-- Keep the release tag, target commit hash, release notes, and SHA-256 manifest together.
+- Keep any eventual release tag, target commit hash, release notes, and SHA-256 manifest together.
+- Before publication, compile and inspect the revised TeX source, reconcile the PDF and Markdown, verify references and metadata, and regenerate the checksum manifest from repository bytes. The current manifest is explicitly marked stale.
 - Use the concept DOI for a citation to the evolving repository and a version-specific DOI when citing a particular archived release.
 - If the repository is not enabled in Zenodo before a release is created, enable it before a later release; do not assume older releases will be archived retroactively.
 
