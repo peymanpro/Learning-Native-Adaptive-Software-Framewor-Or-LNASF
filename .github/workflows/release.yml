@@ -181,7 +181,7 @@ jobs:
           GH_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: |
           set -euo pipefail
-          args=( "$TAG" --verify-tag --title "$RELEASE_TITLE" --notes-file "$RUNNER_TEMP/release-notes.md" )
+          args=( "$TAG" "LNASF-v0.2-Research-Positioning.pdf" --verify-tag --title "$RELEASE_TITLE" --notes-file "$RUNNER_TEMP/release-notes.md" )
           if [[ "$PRERELEASE" == "true" ]]; then
             args+=( --prerelease )
           fi
