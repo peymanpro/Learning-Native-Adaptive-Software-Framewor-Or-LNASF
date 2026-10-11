@@ -32,5 +32,6 @@ abstract: >-
   The candidate contribution is under validation against prior work on online
   runtime learning, ML-enabled components, self-adaptive architectures, FORMS,
   Rainbow, adaptive feedback loops, and prior usage of the learning-native
-  software concept. Novelty and performance benefits are not yet established. Reference implementations demonstrate limited subsets
-  only. This draft has not yet been released as a synchronized publication PDF.
+  software concept. Novelty and performance benefits are not yet established.
+  The repository includes the research draft, preliminary prior-art comparison,
+  and compiled PDF. This is not a peer-reviewed paper.
