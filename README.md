@@ -72,7 +72,7 @@ The repository contains a manual GitHub Release workflow, but its end-to-end pub
 - `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
 - `references/` - bibliography source.
 - `CITATION.cff` - software citation metadata for the versioned repository release.
-- `metadata/SHA256SUMS.txt` - integrity hashes for the versioned publication files.
+- `metadata/SHA256SUMS.txt` - currently a stale-manifest warning; regenerate and verify hashes before any new release.
 - `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
 - `RESEARCH-POSITIONING.md` - preliminary prior-art comparison, candidate contribution, and evaluation plan.
 - `RELEASE-PROCESS.md` - versioned GitHub release and Zenodo archival setup.
