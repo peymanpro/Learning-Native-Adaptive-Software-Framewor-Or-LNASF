@@ -2,7 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22142517.svg)](https://doi.org/10.5281/zenodo.22142517)
 
-**Technical Concept and Architecture Specification - Version 0.1**
+**Historical Technical Specification - Version 0.1**  
+**Research status:** Candidate Component Contract and novelty are under validation; not included in the archived Version 0.1 PDF.
 
 **Author:** Peyman Salimi  
 **Date:** 2026-08-28  
