@@ -1,6 +1,6 @@
 # Publication Provenance Notes
 
-The repository preserves the earlier Version 0.1 LNASF disclosure and catalogs limited engineering examples. A preliminary research-positioning supplement dated 2026-10-11 proposes the LNASF Component Contract and adds related-work references. This is an unpublished working draft; it is not evidence of an accepted paper, a verified novel contribution, or a newly archived publication. The historical Version 0.1 TeX/PDF has not yet been updated to include the supplement.
+The repository preserves the earlier Version 0.1 LNASF disclosure and catalogs limited engineering examples. Version 0.2.0 is prepared to archive a research proposal formalizing the candidate LNASF Component Contract and adding a preliminary prior-art comparison. This version is not represented as a peer-reviewed paper, verified novel contribution, or empirical demonstration of improved performance. The Version 0.1 TeX/PDF remain historical snapshots; the candidate contract is described in the separate Version 0.2.0 draft source and PDF.
 
 ## Automated release path
 
