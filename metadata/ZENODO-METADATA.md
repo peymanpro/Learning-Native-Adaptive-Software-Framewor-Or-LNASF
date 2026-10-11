@@ -2,9 +2,11 @@
 
 This file records the intended descriptive metadata for repository releases. The preferred publication path is Zenodo's GitHub integration, rather than a second, independent upload from GitHub Actions.
 
-## Title
+## Planned next-revision title (working draft)
 
-Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification
+Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract
+
+**Previous archival title:** Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification
 
 ## Existing archival record and next revision
 
