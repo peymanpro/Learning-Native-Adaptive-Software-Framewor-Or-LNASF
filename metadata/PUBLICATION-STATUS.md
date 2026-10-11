@@ -7,6 +7,6 @@ Before changing status to release-ready:
 - Complete and record a reproducible prior-art search and full-text comparison with the closest works.
 - Refine the candidate contribution based on that comparison.
 - Implement contract-conformance tests and run controlled baseline/ablation experiments, or clearly scope the paper as a proposal if evaluation remains unavailable.
-- Compile and visually inspect the revised PDF; ensure the PDF, TeX, Markdown, bibliography, citation metadata, and release notes describe the same version.
+- Compile `LNASF-v0.2-draft.tex` into `LNASF-v0.2-Research-Positioning.pdf`, visually inspect the PDF, and ensure the PDF, TeX, Markdown, bibliography, citation metadata, and release notes describe the same version.
 - Regenerate and verify metadata/SHA256SUMS.txt from the actual repository files.
 - Confirm that the GitHub release and Zenodo archival setup is intentionally configured for the target version.
