@@ -67,11 +67,11 @@ The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTI
 
 ## Release and Archival Status
 
-The DOI badge at the top refers to the existing Zenodo concept record and an earlier archival state; it must not be read as evidence that the new research-positioning supplement or proposed Component Contract is already included in the archived PDF.
+The DOI badge at the top links to the Zenodo concept record. Confirm that Zenodo has processed the v0.2.0 release and that the version-specific record includes the research-positioning PDF before citing it as an archived v0.2.0 publication.
 
 The existing `LNASF-v0.1.tex` and `LNASF-v0.1-Technical-Specification.pdf` remain the Version 0.1 snapshots. The candidate contribution is in the editable Markdown, `LNASF-v0.2-draft.tex`, and `LNASF-v0.2-Research-Positioning.pdf`. The draft has been compiled into a 13-page PDF by GitHub Actions and visually checked for layout and reference overflow. The release workflow regenerates and verifies the SHA-256 manifest at publication time. Version 0.2.0 is prepared as a clearly qualified research-proposal draft—not as a peer-reviewed paper or proof of novelty.
 
-The repository contains a manual GitHub Release workflow, but its end-to-end publication path has not been verified in this research revision. Do not treat a planned version or a workflow file as a completed release. Zenodo archival status should be confirmed in the account's GitHub integration before asserting that a new version has been archived.
+The manual GitHub Release workflow validates the version metadata, regenerates and verifies the SHA-256 manifest, creates an annotated version tag, and publishes a GitHub Release with the compiled 13-page PDF attached. A completed workflow and visible GitHub Release are the evidence of GitHub publication. Zenodo archival is separate: confirm that the account's GitHub integration has processed v0.2.0 before claiming that a new version has been archived.
 
 ## Files
 
@@ -82,7 +82,7 @@ The repository contains a manual GitHub Release workflow, but its end-to-end pub
 - `LNASF-v0.2-Research-Positioning.pdf` - compiled 13-page research-proposal draft intended for version 0.2.0.
 - `references/` - bibliography source.
 - `CITATION.cff` - software citation metadata for the versioned repository release.
-- `metadata/SHA256SUMS.txt` - currently a stale-manifest warning; regenerate and verify hashes before any new release.
+- `metadata/SHA256SUMS.txt` - release-time SHA-256 manifest; the release workflow regenerates and verifies it for the tagged version. On `main`, the pre-release warning may remain until that workflow runs.
 - `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
 - `RESEARCH-POSITIONING.md` - preliminary prior-art comparison, candidate contribution, and evaluation plan.
 - `RELEASE-PROCESS.md` - versioned GitHub release and Zenodo archival setup.
