@@ -13,4 +13,6 @@
 10. Weyns, D., Malek, S., & Andersson, J. (2012). *FORMS: Unifying Reference Model for Formal Specification of Distributed Self-adaptive Systems*. ACM Transactions on Autonomous and Adaptive Systems, 7(1), Article 8, 1–61. https://doi.org/10.1145/2168260.2168268
 11. Cheng, S.-W., Huang, A.-C., Garlan, D., Schmerl, B., & Steenkiste, P. (2004). *Rainbow: Architecture-Based Self-Adaptation with Reusable Infrastructure*. IEEE Computer, 37(10), 46–54. https://doi.org/10.1109/MC.2004.175
 
+12. Kulkarni, V. (2022). *Supporting dynamic adaptation in the face of uncertainty*. REFSQ 2022 Industry Track, talk abstract, March 23, 2022. The conference abstract describes an inbuilt capability for software to observe, learn, derive knowledge from prior actions, and tune itself; it is a talk/session description, not a detailed peer-reviewed architecture specification. https://2022.refsq.org/details/refsq-2022-industry-track/2/Supporting-dynamic-adaptation-in-the-face-of-uncertainty
+
 These references are a focused preliminary set, not the result of an exhaustive systematic literature review. The specification does not claim the underlying ideas of online learning, self-adaptation, feedback loops, learning-enabled components, or component-level ML abstractions as original.
