@@ -31,7 +31,7 @@ $$
 
 LNASF does not claim to introduce machine learning, self-adaptive software, runtime adaptation, online learning, or learning-enabled components as new concepts. These areas have extensive prior research and established techniques.
 
-The contribution proposed here is a unified architectural model for treating **learning as an explicit, reusable capability of software components**, with particular emphasis on native learning within the host ecosystem, scratch implementations of learning mechanisms, explicit decision policies, safety constraints, deterministic fallbacks, and applicability across different programming languages and software layers.
+The candidate contribution investigated here is a more specific architectural formulation: an explicit, reusable, and testable component-boundary contract for learning-enabled software. The contract makes observation, model updating, prediction evidence, adaptation admission, permitted actions, deterministic fallback, and outcome evaluation explicit. This document does not yet establish that the contract is novel relative to existing frameworks; that is the question addressed by the preliminary comparison and evaluation plan.
 
 ## 1. Motivation
 
@@ -539,33 +539,33 @@ This is a candidate contribution—not a proven claim of historical originality.
 
 ### 24.1. Candidate Contribution: The LNASF Component Contract
 
-For a learning-enabled component (C), the proposed contract is:
+For a learning-enabled component `C`, the proposed contract is:
 
-[
+$$
 \operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
-]
+$$
 
 where:
 
-- (B): deterministic baseline behavior;
-- (O): observation interface and collection boundaries;
-- (M): learning model and update procedure;
-- (P): prediction interface, including evidence sufficiency or uncertainty;
-- (G): explicit adaptation-admission gate, separate from the predictor;
-- (A): permitted adaptation actions and resource bounds;
-- (F): deterministic fallback or abstention behavior;
-- (E): outcome evaluation and feedback into subsequent learning.
+- `B`: deterministic baseline behavior;
+- `O`: observation interface and collection boundaries;
+- `M`: learning model and update procedure;
+- `P`: prediction interface, including evidence sufficiency or uncertainty;
+- `G`: explicit adaptation-admission gate, separate from the predictor;
+- `A`: permitted adaptation actions and resource bounds;
+- `F`: deterministic fallback or abstention behavior;
+- `E`: outcome evaluation and feedback into subsequent learning.
 
 One candidate gate is:
 
-[
-G_t(a)=
-[q_t\geq\epsilon]
+$$
+G_t(a) =
+[q_t \geq \epsilon]
 \land [S(a,o_t)=\mathrm{true}]
 \land [\widehat{\Delta U}_t(a)-C_{\mathrm{adapt},t}>\lambda]
-]
+$$
 
-The component applies an adaptive action only when the gate passes. Otherwise it uses (B(o_t)), or returns an advisory result in advisory mode. Here (q_t) is an application-defined evidence-adequacy measure; (S) is a hard safety/resource constraint; (widehat{\Delta U}_t) is estimated utility improvement; and (C_{\mathrm{adapt},t}) is adaptation cost. Thresholds (epsilon) and (lambda) are application-specific and require evaluation. An uncalibrated confidence score must not be presented as a calibrated probability.
+The component applies an adaptive action only when the gate passes. Otherwise it uses `B(o_t)`, or returns an advisory result in advisory mode. Here `q_t` is an application-defined evidence-adequacy measure; `S` is a hard safety/resource constraint; `\widehat{\Delta U}_t` is estimated utility improvement; and `C_{adapt}` is adaptation cost. Thresholds `\epsilon` and `\lambda` are application-specific and require evaluation. An uncalibrated confidence score must not be presented as a calibrated probability.
 
 The candidate distinction is the **explicit contract and its conformance/evaluation obligations at the reusable component boundary**, not the invention of any one of these ingredients. Whether this contract is sufficiently different from REX, ML-DEECo, component-based ML abstractions, and existing adaptive-loop architectures remains an open research question.
 
