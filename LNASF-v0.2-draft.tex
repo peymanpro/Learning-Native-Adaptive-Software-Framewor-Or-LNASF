@@ -324,7 +324,7 @@ NetUtility=Benefit-Cost-AdaptationOverhead
 \]
 
 \section{Prior Art and Related Work}
-LNASF is situated within established research on autonomic computing and self-adaptive systems [1,2], machine learning in feedback-loop-based adaptation [3], online runtime learning and component assembly [4], ML-enabled self-organizing components [5], component-based ML abstractions [6,7], and adaptive feedback-loop architectures [8].
+LNASF is situated within established research on autonomic computing and self-adaptive systems [1,2], machine learning in feedback-loop-based adaptation [3], online runtime learning and component assembly [4], ML-enabled self-organizing components [5], component-based ML abstractions [6,7], adaptive feedback-loop architectures [8], reusable architecture-based self-adaptation infrastructure [11], and the FORMS unifying reference model for distributed self-adaptive systems [10].
 
 REX directly combines online learning with runtime adaptation of software components. ML-DEECo and subsequent work integrate machine learning into component-based adaptive systems, while HAFLoop studies reusable architectures for adaptation of feedback loops. These works are close prior art. LNASF therefore does not claim to originate online learning, runtime adaptation, component-level learning, generic feedback loops, or safety constraints as isolated concepts.
 
@@ -351,7 +351,7 @@ G_t(a) =
 \]
 The component applies the adaptive action only if the gate passes; otherwise it uses $B(o_t)$ or returns an advisory result. The thresholds are application-specific. A confidence score must not be described as a calibrated probability without calibration evidence.
 
-This proposal treats the explicit contract and its conformance/evaluation obligations as the candidate research contribution—not the invention of the individual components. Whether the contract is sufficiently different from REX, ML-DEECo, ML abstraction frameworks, and reusable adaptive feedback loops remains an open question.
+This proposal treats the explicit contract and its conformance/evaluation obligations as the candidate research contribution—not the invention of the individual components. Whether the contract is sufficiently different from REX, ML-DEECo, ML abstraction frameworks, and reusable adaptive feedback loops remains an open question. FORMS [10] and Rainbow [11] mean that LNASF cannot claim distinction merely because it presents a reusable or unifying adaptation architecture.
 
 \section{Research Hypothesis}
 \begin{quote}
@@ -431,6 +431,8 @@ Salimi, Peyman. (2026). \textit{Learning-Native Adaptive Software Framework (LNA
 \item Abdullah, M., T\"opfer, M., Bure\v{s}, T., Hn\v{e}tynka, P., Kruli\v{s}, M., \& Pl\"a\v{s}il, F. (2023). Introducing Estimators---Abstraction for Easy ML Employment in Self-adaptive Architectures. \textit{ECSA 2022 Tracks and Workshops}, 370--385. DOI: 10.1007/978-3-031-36889-9\_25.
 \item Zavala, E., Franch, X., Marco, J., \& Berger, C. (2020). HAFLoop: An architecture for supporting Highly Adaptive Feedback Loops in self-adaptive systems. \textit{Future Generation Computer Systems}, 105, 607--630. DOI: 10.1016/j.future.2019.12.026.
 \item Peffers, K., Tuunanen, T., Rothenberger, M. A., \& Chatterjee, S. (2007). A Design Science Research Methodology for Information Systems Research. \textit{Journal of Management Information Systems}, 24(3), 45--77. DOI: 10.2753/MIS0742-1222240302.
+\item Weyns, D., Malek, S., \& Andersson, J. (2012). FORMS: Unifying Reference Model for Formal Specification of Distributed Self-adaptive Systems. \textit{ACM Transactions on Autonomous and Adaptive Systems}, 7(1), Article 8, 1--61. DOI: 10.1145/2168260.2168268.
+\item Garlan, D., Cheng, S.-W., Huang, A.-C., Schmerl, B., \& Steenkiste, P. (2004). Rainbow: Architecture-Based Self-Adaptation with Reusable Infrastructure. \textit{IEEE Computer}, 37(10), 46--54. DOI: 10.1109/MC.2004.175.
 \end{enumerate}
 
 \end{document}
