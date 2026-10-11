@@ -40,6 +40,10 @@ No Zenodo token is required when using Zenodo's official GitHub integration.
 
 Zenodo automatically archives future GitHub releases only after the repository is enabled. If the integration was not enabled at release time, do not assume that older releases will be archived retroactively. Each successfully archived version receives its own version DOI; the concept DOI linked from the repository points to the latest version.
 
-## Current publication readiness
+## Current publication scope
 
-**Do not run the publication workflow for this research revision yet.** `metadata/PUBLICATION-STATUS.md` deliberately marks the repository as `draft`, and the workflow now refuses to publish until that file is changed to `status: release-ready`. First finish the full-text prior-art comparison and evaluation, compile `LNASF-v0.2-draft.tex` into `LNASF-v0.2-Research-Positioning.pdf`, visually inspect that PDF, synchronize the source/Markdown/bibliography/citation metadata, and regenerate the checksum manifest. The workflow checksum list requires the new PDF to exist before release. The Version 0.1 PDF remains a historical snapshot. A workflow file or planned version is not evidence of a completed release.
+The repository is marked `status: release-ready` **only for archiving a clearly labeled research-proposal draft** as version `0.2.0`. This is not a statement that the work is peer-reviewed, that the candidate contract is demonstrably new, or that the proposal has shown performance improvements.
+
+The draft TeX compiled successfully into `LNASF-v0.2-Research-Positioning.pdf` using the build workflow, the text checks passed, and the 13-page output was visually inspected for layout issues. The release workflow requires this PDF and regenerates/verifies `metadata/SHA256SUMS.txt` from repository bytes before tagging and publishing.
+
+Before invoking the release workflow, verify that the repository secret `RELEASE_TOKEN` exists and is owned by the account that should publish the release. Keep the Version 0.1 TeX/PDF as historical artifacts. Zenodo archival still requires confirming that this repository is enabled in the account's GitHub integration.
