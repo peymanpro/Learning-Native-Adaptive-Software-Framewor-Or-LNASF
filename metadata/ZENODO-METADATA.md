@@ -19,7 +19,7 @@ Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Ca
 
 ## Description
 
-The repository preserves an earlier Version 0.1 technical concept specification and now includes a preliminary working draft proposing the LNASF Component Contract. The draft distinguishes candidate architectural contribution from established prior art and explicitly leaves novelty validation and empirical evaluation open. It is not yet a new archived publication. Existing frontend and real-time examples demonstrate subsets of the framework and do not establish general performance improvements.
+The repository preserves an earlier Version 0.1 technical concept specification and includes a preliminary working draft proposing the LNASF Component Contract. The draft distinguishes a candidate architectural contribution from established prior art and explicitly leaves novelty validation and empirical evaluation open. After the GitHub release is processed by Zenodo, verify the version-specific record and PDF before treating v0.2.0 as an archived publication. Existing frontend and real-time examples demonstrate subsets of the framework and do not establish general performance improvements.
 
 ## Keywords
 
