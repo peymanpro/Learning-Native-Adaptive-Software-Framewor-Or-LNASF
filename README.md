@@ -33,6 +33,15 @@ The document records a specific proposed architectural formulation centered on:
 - constrained runtime adaptation;
 - applicability across multiple software layers and programming languages.
 
+## Candidate Research Contribution (Under Validation)
+
+The candidate contribution is the **LNASF Component Contract**: a proposed, testable component-boundary specification that makes observation, model updates, prediction/evidence, adaptation admission, allowed actions, deterministic fallback, and outcome evaluation explicit.
+
+The intended distinction is not a claim to invent online learning or self-adaptive software. Closely related prior art includes REX, ML-DEECo, component-based ML abstractions, and adaptive feedback-loop architectures. Whether the proposed contract adds a defensible distinction remains to be established by full-text comparison and controlled evaluation.
+
+- [Research positioning and preliminary prior-art comparison](RESEARCH-POSITIONING.md)
+- [Editable specification and proposed contract](SPECIFICATION.md#241-candidate-contribution-the-lnasf-component-contract)
+
 ## Reference Implementation
 
 The [LNASF Adaptive Admin Console](https://github.com/peymanpro/LNASF-Adaptive-Admin-Console) is an application-level reference implementation of a **limited subset** of these principles. It uses a native TypeScript transition-frequency model, an explicit decision policy, constrained predictive route preloading, a deterministic fallback, and runtime counters.
@@ -47,23 +56,25 @@ The [LNASF real-time communication examples](REALTIME-COMMUNICATION-EXAMPLES.md)
 
 The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md) document two limited research demonstrations: the [React useState hook](https://github.com/peymanpro/LNASF-Adaptive-React-useState-Hook) explores online state-transition learning with explicit adaptation and safety gates; the [Next.js dnd-kit playground](https://github.com/peymanpro/LNASF-Adaptive-Next-dnd-kit-Playground) learns from interaction-event sequences and presents user-controlled workflow suggestions. They demonstrate selected principles at different frontend boundaries, not the complete LNASF framework.
 
-## Versioned Releases and Zenodo Archival
+## Release and Archival Status
 
-GitHub releases are published through the [versioned release workflow](.github/workflows/release.yml). The workflow validates the version against `CITATION.cff` and `CHANGELOG.md`, refreshes and verifies the SHA-256 manifest, creates an annotated version tag, and publishes a GitHub Release.
+The DOI badge at the top refers to the existing Zenodo concept record and an earlier archival state; it must not be read as evidence that the new research-positioning supplement or proposed Component Contract is already included in the archived PDF.
 
-See [RELEASE-PROCESS.md](RELEASE-PROCESS.md) for the one-time `RELEASE_TOKEN` setup and Zenodo integration steps. When this repository is enabled in the Zenodo GitHub integration, future GitHub releases are automatically archived and versioned. The DOI badge above points to the existing Zenodo concept record; each archived release can have its own version-specific DOI.
+The existing `LNASF-v0.1.tex` and `LNASF-v0.1-Technical-Specification.pdf` remain the Version 0.1 snapshots. The candidate contribution is currently in the editable Markdown and in `LNASF-v0.2-draft.tex`. The draft TeX has not yet been compiled and checked as a new PDF. **Do not publish a new version until the source, rendered PDF, metadata, references, and checksum manifest are synchronized and verified.**
 
-**Scope:** release `v0.1.2` updates the repository's documentation, example catalog, and release process. The underlying technical specification and PDF remain Version 0.1; they are not being represented as a newly revised specification.
+The repository contains a manual GitHub Release workflow, but its end-to-end publication path has not been verified in this research revision. Do not treat a planned version or a workflow file as a completed release. Zenodo archival status should be confirmed in the account's GitHub integration before asserting that a new version has been archived.
 
 ## Files
 
 - `SPECIFICATION.md` - editable specification with LaTeX math.
-- `LNASF-v0.1.tex` - LaTeX source used to produce the PDF.
+- `LNASF-v0.1.tex` - historical LaTeX source for the Version 0.1 PDF.
+- `LNASF-v0.2-draft.tex` - revised working source with the proposed component contract; not yet compiled into a release PDF.
 - `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
 - `references/` - bibliography source.
 - `CITATION.cff` - software citation metadata for the versioned repository release.
 - `metadata/SHA256SUMS.txt` - integrity hashes for the versioned publication files.
 - `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
+- `RESEARCH-POSITIONING.md` - preliminary prior-art comparison, candidate contribution, and evaluation plan.
 - `RELEASE-PROCESS.md` - versioned GitHub release and Zenodo archival setup.
 - `CHANGELOG.md` - version history.
 
