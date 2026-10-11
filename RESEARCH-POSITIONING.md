@@ -61,7 +61,7 @@ The distinctive research question is whether making these elements and their rel
 | Töpfer et al. (2023) [6] | Machine-learning abstractions integrated into component-based self-optimizing systems, including optimization heuristics | Direct prior art against a broad claim that LNASF first makes learning a component capability. |
 | Abdullah et al. (2023) [7] | Estimator abstractions to ease the use of ML in self-adaptive architectures | Directly relevant to reusable abstractions for integrating ML into adaptive architectures. Full-text comparison is required. |
 | Zavala et al. / HAFLoop (2020) [8] | Modular, reusable architecture for adapting feedback-loop structure and parameters | LNASF cannot claim generic reusable adaptation loops or configurable adaptation structure as novel. |
-| Peffers et al. (2007/2008) [9] | Design Science Research Methodology, including artifact design, demonstration, evaluation, and communication | Provides a suitable methodological pattern for evaluating an architectural artifact; it is not evidence that LNASF's technical concept is novel. |
+| Peffers et al. (2007) [9] | Design Science Research Methodology, including artifact design, demonstration, evaluation, and communication | Provides a suitable methodological pattern for evaluating an architectural artifact; it is not evidence that LNASF's technical concept is novel. |
 
 This table is intentionally conservative. It maps high-level overlap based on bibliographic records and available abstracts. It does **not** yet prove detailed equivalence or difference. Before a journal submission, the closest full texts—especially REX, ML-DEECo, the 2023 component abstractions, and Introducing Estimators—must be compared feature by feature.
 
