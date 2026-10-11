@@ -40,6 +40,6 @@ No Zenodo token is required when using Zenodo's official GitHub integration.
 
 Zenodo automatically archives future GitHub releases only after the repository is enabled. If the integration was not enabled at release time, do not assume that older releases will be archived retroactively. Each successfully archived version receives its own version DOI; the concept DOI linked from the repository points to the latest version.
 
-## Current scope
+## Current publication readiness
 
-Release `v0.1.2` updates repository documentation and publication automation. The original LNASF technical specification and its PDF remain Version 0.1.
+**Do not run the publication workflow for this research revision yet.** The Component Contract and prior-art analysis are a working draft, and `LNASF-v0.2-draft.tex` has not yet been compiled, visually checked, or reconciled with a final publication PDF. The Version 0.1 PDF remains a historical snapshot. Before publishing, finish the full-text prior-art comparison and evaluation, compile and inspect the revised PDF, update all citation/version metadata, and regenerate the checksum manifest in the release workflow. A workflow file or planned version is not evidence of a completed release.
