@@ -79,6 +79,7 @@ The repository contains a manual GitHub Release workflow, but its end-to-end pub
 - `LNASF-v0.1.tex` - historical LaTeX source for the Version 0.1 PDF.
 - `LNASF-v0.2-draft.tex` - revised working source with the proposed component contract; not yet compiled into a release PDF.
 - `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
+- `LNASF-v0.2-Research-Positioning.pdf` - required final PDF output for the draft; not yet created or released.
 - `references/` - bibliography source.
 - `CITATION.cff` - software citation metadata for the versioned repository release.
 - `metadata/SHA256SUMS.txt` - currently a stale-manifest warning; regenerate and verify hashes before any new release.
