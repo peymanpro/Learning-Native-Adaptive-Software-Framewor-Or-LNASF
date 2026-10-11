@@ -71,6 +71,10 @@ jobs:
             echo "::error::CHANGELOG.md has no top-level release section for $VERSION."
             exit 1
           }
+          if ! grep -Fqx "status: release-ready" metadata/PUBLICATION-STATUS.md; then
+            echo "::error::Publication is still marked as draft. Complete the research, PDF, metadata, and checksum checklist in metadata/PUBLICATION-STATUS.md before releasing."
+            exit 1
+          fi
           echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Refresh and verify SHA-256 publication manifest
@@ -95,6 +99,7 @@ jobs:
             "RESEARCH-POSITIONING.md"
             "SPECIFICATION.md"
             "metadata/PROVENANCE.md"
+            "metadata/PUBLICATION-STATUS.md"
             "metadata/ZENODO-METADATA.md"
             "references/REFERENCES.md"
             "references/references.bib"
