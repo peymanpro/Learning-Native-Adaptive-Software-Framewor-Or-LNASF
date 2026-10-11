@@ -69,7 +69,7 @@ The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTI
 
 The DOI badge at the top refers to the existing Zenodo concept record and an earlier archival state; it must not be read as evidence that the new research-positioning supplement or proposed Component Contract is already included in the archived PDF.
 
-The existing `LNASF-v0.1.tex` and `LNASF-v0.1-Technical-Specification.pdf` remain the Version 0.1 snapshots. The candidate contribution is currently in the editable Markdown and in `LNASF-v0.2-draft.tex`. The draft TeX has not yet been compiled and checked as a new PDF. **Do not publish a new version until the source, rendered PDF, metadata, references, and checksum manifest are synchronized and verified.**
+The existing `LNASF-v0.1.tex` and `LNASF-v0.1-Technical-Specification.pdf` remain the Version 0.1 snapshots. The candidate contribution is in the editable Markdown, `LNASF-v0.2-draft.tex`, and `LNASF-v0.2-Research-Positioning.pdf`. The draft has been compiled into a 13-page PDF by GitHub Actions and visually checked for layout and reference overflow. The release workflow regenerates and verifies the SHA-256 manifest at publication time. Version 0.2.0 is prepared as a clearly qualified research-proposal draft—not as a peer-reviewed paper or proof of novelty.
 
 The repository contains a manual GitHub Release workflow, but its end-to-end publication path has not been verified in this research revision. Do not treat a planned version or a workflow file as a completed release. Zenodo archival status should be confirmed in the account's GitHub integration before asserting that a new version has been archived.
 
@@ -79,7 +79,7 @@ The repository contains a manual GitHub Release workflow, but its end-to-end pub
 - `LNASF-v0.1.tex` - historical LaTeX source for the Version 0.1 PDF.
 - `LNASF-v0.2-draft.tex` - revised working source with the proposed component contract; not yet compiled into a release PDF.
 - `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
-- `LNASF-v0.2-Research-Positioning.pdf` - required final PDF output for the draft; not yet created or released.
+- `LNASF-v0.2-Research-Positioning.pdf` - compiled 13-page research-proposal draft intended for version 0.2.0.
 - `references/` - bibliography source.
 - `CITATION.cff` - software citation metadata for the versioned repository release.
 - `metadata/SHA256SUMS.txt` - currently a stale-manifest warning; regenerate and verify hashes before any new release.
