@@ -6,17 +6,18 @@ This file records the intended descriptive metadata for repository releases. The
 
 Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification
 
-## Repository release
+## Existing archival record and next revision
 
-- **Version:** 0.1.2 (GitHub tag: `v0.1.2`)
-- **Release date:** 2026-10-11
+- **Current working source:** preliminary research-positioning draft dated 2026-10-11 (not yet released)
+- **Previous specification snapshot:** Version 0.1
+- **Planned next version:** not assigned until the source, final PDF, references, and metadata are synchronized and checked
 - **Creator:** Peyman Salimi
 - **Canonical repository:** https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF
 - **Concept DOI currently linked from GitHub:** https://doi.org/10.5281/zenodo.22142517
 
 ## Description
 
-The repository preserves the Version 0.1 technical concept and architecture specification for reusable software components that observe runtime behavior, learn from experience, make constrained predictions and decisions, and adapt selected aspects of their behavior while retaining deterministic fallback behavior. The repository release adds an indexed set of limited frontend state and interaction examples alongside the existing real-time communication examples. These demonstrations cover selected principles only; they do not claim that the full framework is complete or establish general performance improvements.
+The repository preserves an earlier Version 0.1 technical concept specification and now includes a preliminary working draft proposing the LNASF Component Contract. The draft distinguishes candidate architectural contribution from established prior art and explicitly leaves novelty validation and empirical evaluation open. It is not yet a new archived publication. Existing frontend and real-time examples demonstrate subsets of the framework and do not establish general performance improvements.
 
 ## Keywords
 
@@ -31,4 +32,4 @@ machine learning; artificial intelligence; self-adaptive software; adaptive soft
 
 ## Scope
 
-GitHub tag `v0.1.2` is a repository-level documentation and publication-process release. The core specification remains Version 0.1, and the existing specification PDF is unchanged.
+No claim is made here that a new release has been published. The current draft is not yet synchronized with a revised, compiled PDF. The old PDF remains a Version 0.1 snapshot; prepare new archival metadata only after the research draft is finalized.
