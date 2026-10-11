@@ -37,6 +37,14 @@ The document records a specific proposed architectural formulation centered on:
 
 The candidate contribution is the **LNASF Component Contract**: a proposed, testable component-boundary specification that makes observation, model updates, prediction/evidence, adaptation admission, allowed actions, deterministic fallback, and outcome evaluation explicit.
 
+For a component `C`, the proposed contract is:
+
+$
+\operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
+$
+
+Here `G` is an explicit adaptation-admission gate separated from prediction; the other terms specify the baseline, observations, update procedure, prediction evidence, permitted actions, fallback, and evaluation/feedback.
+
 The intended distinction is not a claim to invent online learning or self-adaptive software. Closely related prior art includes REX, ML-DEECo, component-based ML abstractions, and adaptive feedback-loop architectures. Whether the proposed contract adds a defensible distinction remains to be established by full-text comparison and controlled evaluation.
 
 - [Research positioning and preliminary prior-art comparison](RESEARCH-POSITIONING.md)
