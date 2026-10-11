@@ -1,0 +1,72 @@
+name: Build LNASF v0.2 research draft PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "LNASF-v0.2-draft.tex"
+      - ".github/workflows/build-draft-pdf.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lnasf-v0.2-pdf-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compile and validate research draft PDF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install LaTeX and PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended poppler-utils
+
+      - name: Compile LaTeX source
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build LNASF-v0.2-draft.tex
+          test -s build/LNASF-v0.2-draft.pdf
+          cp build/LNASF-v0.2-draft.pdf LNASF-v0.2-Research-Positioning.pdf
+
+      - name: Validate the generated PDF
+        run: |
+          set -euo pipefail
+          pdfinfo LNASF-v0.2-Research-Positioning.pdf
+          pdftotext LNASF-v0.2-Research-Positioning.pdf build/research-draft.txt
+          grep -Fq "LNASF Component Contract" build/research-draft.txt
+          grep -Fq "REX" build/research-draft.txt
+          grep -Fq "Rainbow" build/research-draft.txt
+          grep -Fq "References" build/research-draft.txt
+
+      - name: Upload compiled PDF as a build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LNASF-v0.2-Research-Positioning-PDF
+          path: LNASF-v0.2-Research-Positioning.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Commit generated draft PDF to main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add LNASF-v0.2-Research-Positioning.pdf
+          if git diff --cached --quiet; then
+            echo "The generated PDF is unchanged."
+            exit 0
+          fi
+          git commit -m "build: compile LNASF v0.2 research draft PDF"
+          git push origin HEAD:main
