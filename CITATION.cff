@@ -1,9 +1,8 @@
 cff-version: 1.2.0
 message: "If you use or reference this specification, please cite it as follows."
-title: "Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification"
+title: "Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract"
 type: software
 version: "0.1.2"
-date-released: 2026-10-11
 authors:
   - family-names: Salimi
     given-names: Peyman
@@ -26,11 +25,12 @@ keywords:
 license: CC-BY-4.0
 repository-code: "https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF"
 abstract: >-
-  A technical concept and architecture specification for reusable software
-  components that observe runtime behavior, learn from experience, predict,
-  make constrained decisions, and adapt selected aspects of their behavior
-  while retaining deterministic fallback behavior. The repository also
-  catalogs limited reference examples across frontend, backend, and runtime
-  boundaries. The examples illustrate selected principles and do not claim
-  to implement the complete LNASF framework or establish general performance
-  improvements.
+  A research working draft for the Learning-Native Adaptive Software Framework
+  (LNASF). It proposes a candidate component-boundary contract that makes
+  observation, model updating, prediction evidence, adaptation admission,
+  permitted actions, deterministic fallback, and outcome evaluation explicit.
+  The candidate contribution is under validation against prior work on online
+  runtime learning, ML-enabled components, self-adaptive architectures, and
+  adaptive feedback loops. Novelty and performance benefits are not yet
+  established. Reference implementations demonstrate limited subsets only.
+  This draft has not yet been released as a synchronized publication PDF.
