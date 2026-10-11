@@ -12,7 +12,7 @@ Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Ca
 
 - **Current working source:** preliminary research-positioning draft dated 2026-10-11 (not yet released)
 - **Previous specification snapshot:** Version 0.1
-- **Planned next version:** not assigned until the source, final PDF, references, and metadata are synchronized and checked
+- **Planned next version:** 0.2.0 (working draft; not yet released; publish only after the source, final PDF, references, and metadata are synchronized and checked)
 - **Creator:** Peyman Salimi
 - **Canonical repository:** https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF
 - **Concept DOI currently linked from GitHub:** https://doi.org/10.5281/zenodo.22142517
