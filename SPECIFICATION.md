@@ -573,11 +573,11 @@ A possible testable invariant is that a component must not apply a learned adapt
 
 ## 25. Research Hypothesis
 
-The central hypothesis is:
+The central hypothesis for the candidate contribution is:
 
-> Reusable software components can benefit from treating learning as an explicit, native, and constrained architectural capability, allowing selected runtime decisions to improve through accumulated experience while preserving deterministic fallback behavior.
+> An explicit LNASF Component Contract—with inspectable observation, model-update, prediction-evidence, adaptation-admission, allowed-action, fallback, and evaluation obligations—can make adaptive behavior easier to inspect and test than implementations where these concerns remain implicit, while preserving safe fallback and accounting for adaptation overhead.
 
-This hypothesis should be tested through reference implementations and controlled experiments.
+This is an empirical hypothesis, not an established result. It should be evaluated by contract-conformance checks, controlled comparisons with a deterministic baseline, component-level ablations, and measurements of both outcome quality and adaptation cost.
 
 ## 26. Potential Software Family
 
