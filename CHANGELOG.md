@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased research draft (2026-10-11)
+
+- Added a preliminary prior-art comparison and made the candidate LNASF Component Contract explicit.
+- Distinguished the proposed component-boundary contract from established work on online learning, self-adaptive software, ML-enabled components, and adaptive feedback loops.
+- Added references with DOI/official links and a draft evaluation plan.
+- Added `LNASF-v0.2-draft.tex` as an unpublished working source. It has not yet been compiled or checked as a publication PDF.
+- The existing Version 0.1 PDF and TeX are preserved as historical snapshots. No new release or Zenodo archive is claimed by this draft entry.
+
 ## 0.1.2 - 2026-10-11
 
 Repository-level documentation and publication automation update. The underlying LNASF technical specification remains Version 0.1.
