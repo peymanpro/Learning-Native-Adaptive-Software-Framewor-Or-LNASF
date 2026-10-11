@@ -3,6 +3,7 @@ message: "If you use or reference this specification, please cite it as follows.
 title: "Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract"
 type: software
 version: "0.2.0"
+date-released: 2026-10-11
 authors:
   - family-names: Salimi
     given-names: Peyman
