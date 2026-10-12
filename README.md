@@ -41,7 +41,7 @@ The candidate contribution is the **LNASF Component Contract**: a proposed, test
 For a component `C`, the proposed contract is:
 
 $$
-\operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
+\mathrm{LCC}(C) = (B,O,M,P,G,A,F,E)
 $$
 
 Here `G` is an explicit adaptation-admission gate separated from prediction; the other terms specify the baseline, observations, update procedure, prediction evidence, permitted actions, fallback, and evaluation/feedback.
