@@ -1,13 +1,13 @@
 # Learning-Native Adaptive Software Framework (LNASF)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22142517.svg)](https://doi.org/10.5281/zenodo.22142517)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23310367.svg)](https://doi.org/10.5281/zenodo.23310367)
 
-**Historical Technical Specification - Version 0.1**  
-**Research status:** Candidate Component Contract and novelty are under validation; not included in the archived Version 0.1 PDF.
+**Current release:** \`v0.2.0\` — Research Positioning and Candidate Component Contract  
+**Research status:** Working research proposal. The candidate contribution and its novelty remain under validation; this is not a peer-reviewed paper or evidence of demonstrated performance gains.
 
 **Author:** Peyman Salimi  
-**Date:** 2026-08-28  
-**Status:** Technical disclosure / concept specification
+**Current release date:** 2026-10-12  
+**Historical artifact:** The Version 0.1 technical specification is preserved as a separate snapshot.
 
 ## About
 
@@ -15,7 +15,7 @@ LNASF is a proposed architectural framework for building reusable software compo
 
 The central loop is:
 
-`Observe -> Learn -> Predict -> Decide -> Adapt -> Measure -> Learn`
+\`Observe -> Learn -> Predict -> Decide -> Adapt -> Measure -> Learn\`
 
 The framework is intended to be applicable to libraries, frameworks, runtimes, developer tools, frontend systems, backend systems, and infrastructure.
 
@@ -23,7 +23,7 @@ The framework is intended to be applicable to libraries, frameworks, runtimes, d
 
 LNASF does **not** claim to invent machine learning, self-adaptive software, online learning, runtime adaptation, MAPE-K, predictive prefetching, or learning-enabled components. Those areas have substantial prior art.
 
-The document records a specific proposed architectural formulation centered on:
+The work records a specific proposed architectural formulation centered on:
 
 - learning as an explicit reusable software-component capability;
 - native learning within the host ecosystem;
@@ -38,13 +38,13 @@ The document records a specific proposed architectural formulation centered on:
 
 The candidate contribution is the **LNASF Component Contract**: a proposed, testable component-boundary specification that makes observation, model updates, prediction/evidence, adaptation admission, allowed actions, deterministic fallback, and outcome evaluation explicit.
 
-For a component `C`, the proposed contract is:
+For a component \`C\`, the proposed contract is:
 
 $$
-\operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
+\\operatorname{LCC}(C) = (B,O,M,P,G,A,F,E)
 $$
 
-Here `G` is an explicit adaptation-admission gate separated from prediction; the other terms specify the baseline, observations, update procedure, prediction evidence, permitted actions, fallback, and evaluation/feedback.
+Here \`G\` is an explicit adaptation-admission gate separated from prediction; the other terms specify the baseline, observations, update procedure, prediction evidence, permitted actions, fallback, and evaluation/feedback.
 
 The intended distinction is not a claim to invent online learning or self-adaptive software. Closely related prior art includes REX, ML-DEECo, component-based ML abstractions, adaptive feedback-loop architectures, Rainbow's reusable adaptation infrastructure, and the FORMS reference model. LNASF cannot claim novelty merely for unifying or reusing adaptation principles. The phrase “learning-native software systems” has also appeared as a research direction in a REFSQ 2022 Industry Track talk; LNASF does not claim novelty for the term or the broad aspiration of software that observes, learns, and tunes itself. Whether the proposed contract adds a defensible distinction remains to be established by full-text comparison and controlled evaluation.
 
@@ -67,31 +67,40 @@ The [LNASF frontend state and interaction examples](FRONTEND-STATE-AND-INTERACTI
 
 ## Release and Archival Status
 
-The DOI badge at the top links to the Zenodo concept record. Confirm that Zenodo has processed the v0.2.0 release and that the version-specific record includes the research-positioning PDF before citing it as an archived v0.2.0 publication.
+Version \`v0.2.0\` has been published on GitHub and archived on Zenodo.
 
-The existing `LNASF-v0.1.tex` and `LNASF-v0.1-Technical-Specification.pdf` remain the Version 0.1 snapshots. The candidate contribution is in the editable Markdown, `LNASF-v0.2-draft.tex`, and `LNASF-v0.2-Research-Positioning.pdf`. The draft has been compiled into a 13-page PDF by GitHub Actions and visually checked for layout and reference overflow. The release workflow regenerates and verifies the SHA-256 manifest at publication time. Version 0.2.0 is prepared as a clearly qualified research-proposal draft—not as a peer-reviewed paper or proof of novelty.
+- **GitHub release:** [LNASF v0.2.0 — Research Proposal Draft](https://github.com/peymanpro/Learning-Native-Adaptive-Software-Framewor-Or-LNASF/releases/tag/v0.2.0). The release includes the compiled 13-page research-positioning PDF.
+- **Zenodo record:** [Version 0.2.0](https://zenodo.org/records/23310367), DOI [10.5281/zenodo.23310367](https://doi.org/10.5281/zenodo.23310367). The record archives the versioned repository source snapshot.
 
-The manual GitHub Release workflow validates the version metadata, regenerates and verifies the SHA-256 manifest, creates an annotated version tag, and publishes a GitHub Release with the compiled 13-page PDF attached. A completed workflow and visible GitHub Release are the evidence of GitHub publication. Zenodo archival is separate: confirm that the account's GitHub integration has processed v0.2.0 before claiming that a new version has been archived.
+The v0.2.0 draft formalizes the candidate LNASF Component Contract and records preliminary related work, research questions, and a proposed evaluation plan. The contribution is still a research proposal: the related-work comparison is preliminary, full-text comparison is incomplete, and controlled empirical evaluation has not established novelty or performance benefits.
+
+The existing \`LNASF-v0.1.tex\` and \`LNASF-v0.1-Technical-Specification.pdf\` remain the historical Version 0.1 snapshots. The v0.2.0 source was compiled into the research-positioning PDF attached to the GitHub release. The release workflow regenerates and verifies the SHA-256 manifest at publication time.
+
+The manual GitHub Release workflow validates version metadata, regenerates and verifies the SHA-256 manifest, creates an annotated version tag, and publishes the GitHub Release with the compiled PDF attached. The Zenodo v0.2.0 record is also live; future versions should be checked separately after the repository integration processes them.
 
 ## Files
 
-- `SPECIFICATION.md` - editable specification with LaTeX math.
-- `LNASF-v0.1.tex` - historical LaTeX source for the Version 0.1 PDF.
-- `LNASF-v0.2-draft.tex` - revised working source with the proposed component contract; not yet compiled into a release PDF.
-- `LNASF-v0.1-Technical-Specification.pdf` - rendered publication version.
-- `LNASF-v0.2-Research-Positioning.pdf` - compiled 13-page research-proposal draft intended for version 0.2.0.
-- `references/` - bibliography source.
-- `CITATION.cff` - software citation metadata for the versioned repository release.
-- `metadata/SHA256SUMS.txt` - release-time SHA-256 manifest; the release workflow regenerates and verifies it for the tagged version. On `main`, the pre-release warning may remain until that workflow runs.
-- `FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md` - limited frontend state and workflow research examples.
-- `RESEARCH-POSITIONING.md` - preliminary prior-art comparison, candidate contribution, and evaluation plan.
-- `RELEASE-PROCESS.md` - versioned GitHub release and Zenodo archival setup.
-- `CHANGELOG.md` - version history.
+- \`SPECIFICATION.md\` - editable specification with LaTeX math.
+- \`LNASF-v0.1.tex\` - historical LaTeX source for the Version 0.1 PDF.
+- \`LNASF-v0.2-draft.tex\` - working source for the candidate component contract and research proposal.
+- \`LNASF-v0.1-Technical-Specification.pdf\` - historical Version 0.1 publication snapshot.
+- \`LNASF-v0.2-Research-Positioning.pdf\` - compiled 13-page research-proposal draft attached to the v0.2.0 GitHub release.
+- \`references/\` - bibliography source.
+- \`CITATION.cff\` - software citation metadata for the versioned repository release.
+- \`metadata/SHA256SUMS.txt\` - release-time SHA-256 manifest; the release workflow regenerates and verifies it for the tagged version. On \`main\`, the pre-release warning may remain until that workflow runs.
+- \`FRONTEND-STATE-AND-INTERACTION-EXAMPLES.md\` - limited frontend state and workflow research examples.
+- \`RESEARCH-POSITIONING.md\` - preliminary prior-art comparison, candidate contribution, and evaluation plan.
+- \`RELEASE-PROCESS.md\` - versioned GitHub release and Zenodo archival setup.
+- \`CHANGELOG.md\` - version history.
 
 ## Citation
 
-The existing archived Version 0.1 can be cited as:
+The current v0.2.0 research-positioning draft can be cited as:
 
-Salimi, Peyman. (2026). *Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification*, Version 0.1.
+Salimi, P. (2026). *Learning-Native Adaptive Software Framework (LNASF): Research Positioning and Candidate Component Contract* (Version 0.2.0) [Research proposal draft]. Zenodo. https://doi.org/10.5281/zenodo.23310367
 
-The LNASF Component Contract is currently an **unpublished research draft** in `RESEARCH-POSITIONING.md`, `SPECIFICATION.md`, and `LNASF-v0.2-draft.tex`. Do not treat the older Version 0.1 PDF or its DOI record as containing this new candidate contribution.
+The historical Version 0.1 specification remains a separate artifact:
+
+Salimi, P. (2026). *Learning-Native Adaptive Software Framework (LNASF): Technical Concept and Architecture Specification* (Version 0.1).
+
+Do not treat the Version 0.1 PDF as containing the candidate Component Contract introduced in the v0.2.0 research draft.
