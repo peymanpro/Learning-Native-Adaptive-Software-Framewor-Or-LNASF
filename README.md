@@ -57,6 +57,30 @@ The [LNASF Adaptive Admin Console](https://github.com/peymanpro/LNASF-Adaptive-A
 
 This implementation is an engineering demonstration—not a claim that the full LNASF framework is complete or that adaptive preloading has already produced a measured performance gain. Its README documents the architecture, tests, evaluation protocol, and current limitations.
 
+## Implementation map and scope
+
+The repositories below are **runnable implementations or bounded technical examples**, not all complete implementations of the framework. They are ordered here by how much application/runtime behavior they demonstrate.
+
+### Application-level adaptations
+
+- [LNASF Adaptive Admin Console](https://github.com/peymanpro/LNASF-Adaptive-Admin-Console) — an Angular application that learns navigation transitions and uses an evidence-gated policy for speculative page preloading.
+- [LNASF Adaptive Angular Task Manager](https://github.com/peymanpro/LNASF-Adaptive-Angular-Task-Manager) — a task-management application with selected adaptive feedback and next-step recommendation behaviors.
+- [LNASF Adaptive Customizable Dashboard](https://github.com/peymanpro/LNASF-Adaptive-Customizable-Dashboard) — a dashboard reference implementation with evidence-gated, user-approved layout suggestions.
+
+### Real-time communication implementations
+
+- [ASP.NET Core + SignalR](https://github.com/peymanpro/LNASF-Adaptive-SignalR-ASPNetCore)
+- [Next.js + SignalR client](https://github.com/peymanpro/LNASF-Adaptive-SignalR-NextJS)
+- [Express + Socket.IO](https://github.com/peymanpro/LNASF-Adaptive-SocketIO-Express)
+- [NestJS + Socket.IO](https://github.com/peymanpro/LNASF-Adaptive-SocketIO-NestJS)
+- [React + Socket.IO client](https://github.com/peymanpro/LNASF-Adaptive-SocketIO-React)
+
+These are bounded communication/integration examples. Their individual READMEs document which LNASF principles are implemented and which production concerns remain out of scope; they should not be described as complete framework implementations.
+
+### Focused interaction demonstrations
+
+[React useState](https://github.com/peymanpro/LNASF-Adaptive-React-useState-Hook) and the [Next.js dnd-kit playground](https://github.com/peymanpro/LNASF-Adaptive-Next-dnd-kit-Playground) isolate selected state and interaction ideas. They are useful research examples, but they are not substitutes for the application-level implementations above.
+
 ## Real-Time Communication Examples
 
 The [LNASF real-time communication examples](REALTIME-COMMUNICATION-EXAMPLES.md) document five limited integrations across Express, NestJS, ASP.NET Core, Next.js and React. They make host-native learning, explicit prediction/decision separation, bounded adaptation, deterministic fallback, and runtime measurement executable. The document links the relevant code/test areas through each repository's README and records verified CI evidence. It distinguishes synthetic unit-level checks from real-world performance claims; these are selected reference examples, not complete LNASF implementations.
